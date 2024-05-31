@@ -32,13 +32,13 @@ export const FAQs = () => {
     ]
   return (
    <>
-   <div className='max-w-screen-xl mx-auto px-10'>
+   <section id="FAQs"><div className='max-w-screen-xl mx-auto px-10'>
     <p className=' font-extrabold lg:text-4xl text-2xl mb-8 mt-10' >Resume FAQs</p>
     <div className='  flex flex-col gap-3'>
         {faqs.map((faq)=> <Collapsible question={faq.q} answer={faq.a} />)}
     </div>
     <p className=' font-extralight my-12'><span className='font-bold'>NOTE:</span> Whenever you send a mail containing proofs/PVFs or anything related to resume submission, kindly ensure that the subject contains your roll number. For detailed guidelines and recommendations on resume making, all the students are advised to visit this <span className='text-primary'>link.</span></p>
-   </div>
+   </div></section>
    </>
   )
 }

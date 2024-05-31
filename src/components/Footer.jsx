@@ -1,19 +1,19 @@
 import React from "react";
 import Links from "../assets/data";
 export const Footer = () => {
-  console.log(Links);
+  // console.log(Links);
   return (
     <>
       <div className=" bg-[#0B121E] ">
         <footer className="footer px-10 text-base-content max-w-screen-xl mx-auto py-28">
-          {Links.map((navlink) => {
+          {Links.map((navlink,index) => {
             return (
-              <nav>
+              <nav key={index}>
                 <h6 className="text-white uppercase text-xl mb-2 font-bold ">
                   {navlink.title}
                 </h6>
-                {navlink.items.map((nav) => (
-                  <a className="link link-hover text-[#C1C4C6]" href={nav.href}>
+                {navlink.items.map((nav,index) => (
+                  <a className="link link-hover text-[#C1C4C6]" href={nav.href} key={index}>
                     {nav.title}
                   </a>
                 ))}

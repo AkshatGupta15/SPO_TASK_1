@@ -41,7 +41,7 @@ export const PreparationRoadmaps = () => {
         <p className='text-4xl font-extrabold'>Preparation Roadmaps</p>
         <div className='flex flex-wrap lg:gap-6 gap-3 justify-center items-center mt-8'>
             
-            {roadmaps.map((btn)=> <button className=' w-64 p-5 bg-white rounded-md shadow-md text-md  font-bold' ><a href={btn.link} >{btn.text}</a></button>)}
+            {roadmaps.map((btn)=> <button className=' w-64 p-5 bg-white rounded-md shadow text-md  font-bold' onClick={()=>window.location.href = btn.link}>{btn.text}</button>)}
         </div>
     </div>
    </div>

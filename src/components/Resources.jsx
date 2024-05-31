@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 const resources = [
     {
     text : "Deffered Placement Policy",
@@ -42,14 +43,15 @@ const resources = [
     },
 ]
 export const Resources = () => {
+    const navigate = useNavigate()
   return (
    <>
-   <div className='max-w-screen-xl mx-auto my-8 px-10 mt-10'>
+   <div className='max-w-screen-xl mx-auto my-8 px-10 mt-10' id='RESOURCES'>
     <div>
         <p className='text-4xl font-extrabold'>Resources</p>
         <div className='flex flex-wrap lg:gap-6 gap-3 justify-center items-center mt-8'>
             
-            {resources.map((btn)=> <button className=' w-64 p-5 bg-white rounded-md shadow-md text-md  font-bold' ><a href={btn.link} >{btn.text}</a></button>)}
+            {resources.map((btn)=> <button className=' w-64 p-5 bg-white rounded-md shadow text-md  font-bold'  onClick={()=>window.location.href = btn.link}>{btn.text}</button>)}
         </div>
     </div>
    </div>

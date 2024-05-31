@@ -1,13 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router";
 export const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <>
-      <div className="drawer drawer-end fixed z-[1000]">
+      <div className="drawer drawer-end fixed z-[1000] top-0">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* Navbar */}
           <div className="w-full navbar bg-slate-100 shadow-md">
-            <div className="flex-1 px-2 mx-2">
+            <div className="flex-1 px-2 mx-2" onClick={()=>navigate("/")} >
               <svg
                 id="Layer_2"
                 width="300"
@@ -18,25 +20,25 @@ export const Navbar = () => {
               >
                 <path
                   fill="#362b7a"
-                  class="cls-1"
+                  className="cls-1"
                   d="M898.74,514c-5.06-3.18-14.45-6-23.41-3s-9,9.78-9,9.78a12.93,12.93,0,0,0,.42,6.15,13.93,13.93,0,0,0,3.92,5.75,19.43,19.43,0,0,0,5.68,3.92A27.51,27.51,0,0,0,882,538a19.7,19.7,0,0,0,9.11-.49,18.88,18.88,0,0,0,8.54-6.15C906.54,523.55,903.8,517.18,898.74,514Zm-15,22.68-.27-.15c-15-8.57-9.38-22.75-9.38-22.75,3.75.06,9.17,1.65,12,8.68C888.55,528.53,884.78,535,883.72,536.67Zm13.86-8.94c-2.11,5.93-8.86,8.57-8.86,8.57,3.69-4.4,4.88-6.16,4.88-6.16,3.51-5.5,2.71-14.85,2.71-14.85C897.16,515.84,899.69,521.79,897.58,527.73Z"
                   transform="translate(-866.18 -497.92)"
                 ></path>
                 <path
                   fill="none"
-                  class="cls-2"
+                  className="cls-2"
                   d="M883.72,536.67l-.27-.15c-15-8.57-9.38-22.75-9.38-22.75,3.75.06,9.17,1.65,12,8.68C888.55,528.53,884.78,535,883.72,536.67Z"
                   transform="translate(-866.18 -497.92)"
                 ></path>
                 <path
                   fill="none"
-                  class="cls-2"
+                  className="cls-2"
                   d="M897.58,527.73c-2.11,5.93-8.86,8.57-8.86,8.57,3.69-4.4,4.88-6.16,4.88-6.16,3.51-5.5,2.71-14.85,2.71-14.85C897.16,515.84,899.69,521.79,897.58,527.73Z"
                   transform="translate(-866.18 -497.92)"
                 ></path>
                 <ellipse
                   fill="#362b7a"
-                  class="cls-1"
+                  className="cls-1"
                   cx="869.29"
                   cy="510.09"
                   rx="3.65"
@@ -45,7 +47,7 @@ export const Navbar = () => {
                 ></ellipse>
                 <ellipse
                   fill="#362b7a"
-                  class="cls-1"
+                  className="cls-1"
                   cx="888.96"
                   cy="503.48"
                   rx="3.52"
@@ -54,7 +56,7 @@ export const Navbar = () => {
                 ></ellipse>
                 <ellipse
                   fill="#362b7a"
-                  class="cls-1"
+                  className="cls-1"
                   cx="901.18"
                   cy="511.54"
                   rx="1.92"
@@ -317,18 +319,18 @@ export const Navbar = () => {
               <ul className="menu menu-horizontal">
                 {/* Navbar menu content here */}
                 <li>
-                  <a>ABOUT IITK</a>
+                  <a href="#">ABOUT IITK</a>
                 </li>
                 <li>
-                  <a>FOR COMPANIESK</a>
+                  <a href="#">FOR COMPANIESK</a>
                 </li><li>
-                  <a>FOR STUDENTS</a>
+                  <a href="#">FOR STUDENTS</a>
                 </li>
                 <li>
-                  <a>SAMVARDHAN</a>
+                  <a href="#">SAMVARDHAN</a>
                 </li>
                 <li>
-                  <a>CONTACT</a>
+                  <a href="#">CONTACT</a>
                 </li>
               </ul>
             </div>
@@ -340,21 +342,21 @@ export const Navbar = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200">
+          <ul className="menu px-8 py-8 w-80 min-h-full bg-base-200">
             {/* Sidebar content here */}
             <li>
-                  <a>ABOUT IITK</a>
+                  <a href="#">ABOUT IITK</a>
                 </li>
                 <li>
-                  <a>FOR COMPANIESK</a>
+                  <a href="#">FOR COMPANIESK</a>
                 </li><li>
-                  <a>FOR STUDENTS</a>
+                  <a href="#">FOR STUDENTS</a>
                 </li>
                 <li>
-                  <a>SAMVARDHAN</a>
+                  <a href="#">SAMVARDHAN</a>
                 </li>
                 <li>
-                  <a>CONTACT</a>
+                  <a href="#">CONTACT</a>
                 </li>
           </ul>
         </div>
