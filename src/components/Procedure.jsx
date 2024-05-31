@@ -15,12 +15,12 @@ export const Procedure = () => {
     ]
   return (
     <div>
-        <div className='max-w-screen-xl mx-auto px-10 mt-32 mb-20'>
+        <div className='max-w-screen-xl mx-auto px-10 mt-32 mb-20' id='PROCEDURES'>
         <p className='text-4xl font-extrabold mb-8'>Procedure</p>
             <div className='flex flex-wrap gap-5'>
                 {procedures.map((procedure,index)=>{
                     return(
-                    <div className='lg:w-[32%] bg-white p-8 text-center font-extralight' key={index}>
+                    <div className='lg:w-[32%] bg-white p-8 text-center font-extralight shadow' key={index}>
                         <p className=' font-bold'>{index+1}</p>
                         <p>{procedure}</p>
                      </div>

@@ -1,11 +1,12 @@
 import React from 'react'
 
 export const Hero = () => {
-  const scrollTo = (targetElement) => {
+  const handleClick = (targetElement) => {
     const target = document.querySelector(targetElement);
+    // console.log(target)
     if (target) {
       window.scrollTo({
-        top: target.offsetTop,
+        top: target.offsetTop - 100,
         behavior: 'smooth'
       });
     }
@@ -19,11 +20,11 @@ export const Hero = () => {
       <p className='lg:text-sm text-[10px] font-bold mt-2'>Students' Placement Office (SPO) at IIT Kanpur</p>
       <p className="py-6 lg:text-xl text-md font-extralight">A collection of resources for students at IIT Kanpur.</p>
       <div className='lg:flex hidden gap-8 my-8 flex-wrap justify-center items-center mt-5'>
-      <button className="btn btn-outline btn-info rounded-sm">INSIGHTS</button>
-      <button className="btn btn-outline btn-info rounded-sm">PROCEDURES</button>
-      <button className="btn btn-outline btn-info rounded-sm">RESOURCES</button>
-      <button className="btn btn-outline btn-info rounded-sm"><a href='#PreparationRoadmaps' onClick={() => handleClick('#PreparationRoadmaps')}>PREPARATION ROADMAPS</a></button>
-      <button className="btn btn-outline btn-info rounded-sm">FAQs</button>
+      <button className="btn btn-outline btn-info rounded-sm"><a href='/insights'>INSIGHTS</a></button>
+      <button className="btn btn-outline btn-info rounded-sm"><a onClick={() => handleClick('#PROCEDURES')}>PROCEDURES</a></button>
+      <button className="btn btn-outline btn-info rounded-sm"><a onClick={() => handleClick('#RESOURCES')}>RESOURCES</a></button>
+      <button className="btn btn-outline btn-info rounded-sm"><a onClick={() => handleClick('#PreparationRoadmaps')}>PREPARATION ROADMAPS</a></button>
+      <button className="btn btn-outline btn-info rounded-sm"><a onClick={() => handleClick('#FAQs')}>FAQs</a></button>
       </div>
     </div>
     
